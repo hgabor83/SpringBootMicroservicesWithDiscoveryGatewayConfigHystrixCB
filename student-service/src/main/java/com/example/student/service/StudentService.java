@@ -3,6 +3,7 @@ package com.example.student.service;
 import com.example.student.VO.ResponseTemplateVO;
 import com.example.student.VO.School;
 import com.example.student.entity.Student;
+import com.example.student.helpers.LogExecutionTime;
 import com.example.student.repository.StudentRepository;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,15 +19,17 @@ public class StudentService {
     @Autowired
     private RestTemplate restTemplate;
 
-
+    @LogExecutionTime
     public Student save(Student newStudent) {
         return studentRepository.save(newStudent);
     }
 
+    @LogExecutionTime
     public Student findStudentById(Integer id) {
         return studentRepository.findById(id).orElseThrow(() -> new RuntimeException("No such id"));
     }
 
+    @LogExecutionTime
     @HystrixCommand(fallbackMethod = "getFallbackStudentWithSchool")
     public ResponseTemplateVO getStudentWithSchool(Integer studentId) {
         ResponseTemplateVO responseTemplateVO = new ResponseTemplateVO();
@@ -45,6 +48,7 @@ public class StudentService {
     }
 
     // In case SCHOOL-SERVICE is down
+    @LogExecutionTime
     public ResponseTemplateVO getFallbackStudentWithSchool(Integer studentId) {
         ResponseTemplateVO responseTemplateVO = new ResponseTemplateVO();
         //For multiple services better way to inject it loadbalanced
