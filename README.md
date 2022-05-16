@@ -1,9 +1,8 @@
 # SpringBootMicroservicesWithDiscoveryGatewayConfig
 
-Example project of Spring Boot Microservices with the following services School and Student, additionally there is Eureka Discovery Service, API Gateway and Config Server, 
-and Hystrix Circuti Breaker
+Example project of Spring Boot Microservices with the following services School and Student, additionally there is Eureka Discovery Service, API Gateway and Config Server, Hystrix Circuti Breaker, AOP logging for Student service
 
-- Updated with SpringDoc and Postman test collection 
+- Updated with AOP logging for Student service
 
 Circuit breaker: it monitors connections to services and falls back if the connection (service) is down
 
