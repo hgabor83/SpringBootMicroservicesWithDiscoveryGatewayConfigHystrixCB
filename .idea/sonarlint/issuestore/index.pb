@@ -21,7 +21,5 @@ Pschool-service/src/main/java/com/example/school/controller/SchoolController.jav
 Sstudent-service/src/main/java/com/example/student/repository/StudentRepository.java,1\b\1b64e6c2404c58252238d507127ed4067258e85c
 |
 Lstudent-service/src/main/java/com/example/student/VO/ResponseTemplateVO.java,1\c\1c7d18f8edc3f1bbf7dc2aef5731385fe78bd102
-ƒ
-Sstudent-service/src/main/java/com/example/student/controller/StudentController.java,6\a\6ae254a277331db5706d47ea19a7ad81257cf8aa
 u
 Estudent-service/src/main/java/com/example/student/entity/Student.java,7\7\77ba3f48b8040b772af882b5a65cf437f7a18a80
