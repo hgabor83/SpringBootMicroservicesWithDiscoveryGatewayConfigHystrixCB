@@ -17,7 +17,7 @@ public class LoggingAspect {
 
     @Before("execution(* com.example.student.service.StudentService.*(..))")
     public void before(JoinPoint joinPoint) {
-        log.info("=== BEFORE === {}", joinPoint.getSignature().getName());
+        log.debug("=== BEFORE === {}", joinPoint.getSignature().getName());
     }
 
     @Around("@annotation(com.example.student.helpers.LogExecutionTime)")
