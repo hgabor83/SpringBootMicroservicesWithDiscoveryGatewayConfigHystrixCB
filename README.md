@@ -4,6 +4,7 @@ Example project of Spring Boot Microservices with the following services School 
 
 - Updated with AOP logging for Student service
 - Updated with some exception handling mechanism for Student service
+- Updated with some unit test example for Student service
 
 Circuit breaker: it monitors connections to services and falls back if the connection (service) is down
 
