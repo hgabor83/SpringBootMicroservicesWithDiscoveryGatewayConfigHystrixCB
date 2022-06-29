@@ -28,8 +28,15 @@ class StudentControllerTest {
 
     @Test
     public void testGetStudentWithSchool() {
-        Student student = new Student(1, "Joe", 1);
-        School school = new School(1, "School1");
+        Student student = Student.builder()
+                .id(1)
+                .name("Joe")
+                .schoolId(1)
+                .build();
+        School school = School.builder()
+                .id(1)
+                .name("School1")
+                .build();
         ResponseTemplateVO studentWithSchool = new ResponseTemplateVO(student, school);
         when(studentService.getStudentWithSchool(any())).thenReturn(studentWithSchool);
 
