@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/students")
 @Slf4j
@@ -16,7 +18,7 @@ public class StudentController {
     private StudentService studentService;
 
     @PostMapping("/")
-    public Student saveStudent(@RequestBody Student newStudent){
+    public Student saveStudent(@Valid @RequestBody Student newStudent){
         log.info("Save a student");
         return studentService.save(newStudent);
     }
