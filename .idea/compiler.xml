@@ -17,6 +17,7 @@
     <bytecodeTargetLevel>
       <module name="cloud-config-server" target="11" />
       <module name="cloud-gateway" target="11" />
+      <module name="demoproject_root-pom" target="1.5" />
       <module name="eureka-discovery-service" target="11" />
       <module name="school-service" target="11" />
       <module name="student-service" target="11" />
@@ -26,6 +27,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-config-server" options="-parameters" />
       <module name="cloud-gateway" options="-parameters" />
+      <module name="demoproject_root-pom" options="-parameters" />
       <module name="eureka-discovery-service" options="-parameters" />
       <module name="school-service" options="-parameters" />
       <module name="student-service" options="-parameters" />

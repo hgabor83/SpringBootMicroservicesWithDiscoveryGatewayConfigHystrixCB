@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.example</groupId>
+	<artifactId>demoproject_root-pom</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Demo-Spring-Boot-Project</name>
+	<description>Demo project for Spring Boot Microservices</description>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>cloud-config-server</module>
+		<module>cloud-gateway</module>
+		<module>eureka-discovery-service</module>
+		<module>school-service</module>
+		<module>student-service</module>
+	</modules>
+
+	<properties>
+		<java.version>11</java.version>
+		<spring-cloud.version>2021.0.0</spring-cloud.version>
+	</properties>
+
+</project>
