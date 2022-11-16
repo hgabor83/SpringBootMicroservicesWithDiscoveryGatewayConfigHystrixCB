@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cloud-config-server/cloud-config-server.iml" filepath="$PROJECT_DIR$/cloud-config-server/cloud-config-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../cloud-gateway/cloud-gateway.iml" filepath="$PROJECT_DIR$/../cloud-gateway/cloud-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-gateway/cloud-gateway.iml" filepath="$PROJECT_DIR$/cloud-gateway/cloud-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoproject_root-pom.iml" filepath="$PROJECT_DIR$/demoproject_root-pom.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-discovery-service/eureka-discovery-service.iml" filepath="$PROJECT_DIR$/eureka-discovery-service/eureka-discovery-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/school-service/school-service.iml" filepath="$PROJECT_DIR$/school-service/school-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/student-service/student-service.iml" filepath="$PROJECT_DIR$/student-service/student-service.iml" />
