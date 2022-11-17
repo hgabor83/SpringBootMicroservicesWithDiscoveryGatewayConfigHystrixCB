@@ -5,13 +5,12 @@
       <list>
         <option value="$PROJECT_DIR$/eureka-discovery-service/pom.xml" />
         <option value="$PROJECT_DIR$/school-service/pom.xml" />
-        <option value="$PROJECT_DIR$/student-service/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-config-server/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
-    </component>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>

@@ -1,0 +1,67 @@
+version: '2'
+services:
+  eureka:
+    container_name: eureka
+    build:
+        context: eureka-discovery-service
+        dockerfile: Dockerfile
+    image: eureka-discovery-service:latest
+    ports:
+      - "8761:8761"
+
+  cloud-config:
+    container_name: cloud-config
+    build:
+      context: cloud-config-server
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka
+    image: cloud-config-server:latest
+    ports:
+      - "8083:8083"
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka:8761/eureka
+
+  cloud-gw:
+    container_name: cloud-gw
+    build:
+      context: cloud-gateway
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka
+      - cloud-config
+    image: cloud-gateway:latest
+    ports:
+      - "8099:8099"
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka:8761/eureka
+
+  school:
+    container_name: school-service
+    build:
+      context: school-service
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka
+      - cloud-config
+      - cloud-gw
+    image: school-service:latest
+    ports:
+      - "8081:8081"
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka:8761/eureka
+
+  student:
+    container_name: student-service
+    build:
+      context: student-service
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka
+      - cloud-config
+      - cloud-gw
+    image: student-service:latest
+    ports:
+      - "8082:8082"
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka:8761/eureka
